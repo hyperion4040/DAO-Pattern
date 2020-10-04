@@ -33,9 +33,12 @@ public class App {
         List<User> users = userDao.getAll();
         users.forEach(user -> logger.log(Level.INFO, String.valueOf(user)));
 
-        final Optional<User> user = userDao.findById(1);
+        final Optional<User> user = userDao.findById(2);
         if (user.isPresent()) {
-            logger.log(Level.INFO, "User is found: {0}",user.get());
+            final User userToUpdate = user.get();
+            logger.log(Level.INFO, "User is found: {0}", userToUpdate);
+            userToUpdate.setName("Snoopy");
+            userDao.update(userToUpdate);
         } else {
             logger.log(Level.INFO, "User does not exist");
         }
