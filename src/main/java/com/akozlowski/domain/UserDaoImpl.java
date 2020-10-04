@@ -9,10 +9,10 @@ import java.util.Optional;
 
 public class UserDaoImpl implements UserDao {
 
-    public static final String INSERT_INTO_USER_NAME_VALUES = "insert into mydb.user (name) values (?)";
-    public static final String SELECT_ID_NAME_FROM_MYDB_USER = "select id, name from mydb.user";
-    public static final String DELETE_FROM_MYDB_USER_WHERE_ID = "delete from mydb.user where id=?";
-    public static final String SELECT_ID_NAME_FROM_MYDB_USER_WHERE_ID = "select id,name from mydb.user where id = (?)";
+    public static final String INSERT_INTO_USER_NAME_VALUES = "insert into user (name) values (?)";
+    public static final String SELECT_ID_NAME_FROM_MYDB_USER = "select id, name from user";
+    public static final String DELETE_FROM_MYDB_USER_WHERE_ID = "delete from user where id=?";
+    public static final String SELECT_ID_NAME_FROM_MYDB_USER_WHERE_ID = "select id,name from user where id = (?)";
 
     @Override
     public void save(final User user) {
@@ -59,7 +59,7 @@ public class UserDaoImpl implements UserDao {
         final Connection connection = Database.getInstance().getConnection();
 
         try {
-            final PreparedStatement statement = connection.prepareStatement("update mydb.user set name=? where id=?");
+            final PreparedStatement statement = connection.prepareStatement("update user set name=? where id=?");
             statement.setString(1, user.getName());
             statement.setInt(2,user.getId());
             statement.executeUpdate();
