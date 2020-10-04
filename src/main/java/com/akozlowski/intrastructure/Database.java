@@ -13,6 +13,10 @@ public class Database {
     private Database() {
     }
 
+    public Connection getConnection() {
+        return connection;
+    }
+
     public static Database getInstance() {
         return db;
     }
