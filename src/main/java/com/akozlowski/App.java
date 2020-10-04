@@ -4,6 +4,7 @@ import com.akozlowski.domain.User;
 import com.akozlowski.domain.UserDao;
 import com.akozlowski.domain.UserDaoImpl;
 import com.akozlowski.intrastructure.Database;
+import com.akozlowski.intrastructure.Profile;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -24,13 +25,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        Properties properties = new Properties();
-        try {
-            properties.load(App.class.getResourceAsStream("/config/db.properties"));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
+        final Properties properties = Profile.getProperties("db");
 
         final Database instance = Database.getInstance();
         try {
