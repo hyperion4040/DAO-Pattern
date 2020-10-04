@@ -1,5 +1,6 @@
 package com.akozlowski.domain;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface Dao<T> {
@@ -10,4 +11,6 @@ public interface Dao<T> {
     void update(final T t);
 
     void delete(final T t);
+
+    List<T> getAll();
 }
