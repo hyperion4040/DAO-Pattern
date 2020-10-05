@@ -11,6 +11,7 @@ public class Profile {
 
         final Properties properties = new Properties();
         final String env = Optional.ofNullable(System.getProperty("env")).orElse("dev");
+
         final String propertiesFile = String.format("/config/%s.%s.properties", propertiesFileName, env);
 
         try {
