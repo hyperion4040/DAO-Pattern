@@ -6,7 +6,6 @@ import com.akozlowski.domain.UserDaoImpl;
 import com.akozlowski.intrastructure.Database;
 import com.akozlowski.intrastructure.Profile;
 
-import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;

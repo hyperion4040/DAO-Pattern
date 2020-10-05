@@ -17,3 +17,7 @@ d
 4src/main/java/com/akozlowski/domain/UserDaoImpl.java,9/3/9378b10ff51cc94a72d728cf34db12036c1d6621
 U
 %src/main/java/com/akozlowski/App.java,4/8/4889a50fb9701bb9a6712d64781342d626e32f50
+S
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
+h
+8src/main/java/com/akozlowski/intrastructure/Profile.java,b/f/bfb7861148e8cc2a7088c019d48b917b012e107f
