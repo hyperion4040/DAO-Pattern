@@ -21,3 +21,9 @@ S
 #.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
 h
 8src/main/java/com/akozlowski/intrastructure/Profile.java,b/f/bfb7861148e8cc2a7088c019d48b917b012e107f
+Y
+)src/test/java/com/akozlowski/AppTest.java,2/0/20a553bd382bf524d664da27fa28e359c31fb791
+l
+<src/test/java/com/akozlowski/intrastructure/ProfileTest.java,a/e/ae802751d9ebf81354064d6acfc5bad5380deb82
+h
+8src/test/java/com/akozlowski/domain/UserDaoImplTest.java,5/d/5dcb4ad8defdf42e22a241bc5a9dde85f07601b3
