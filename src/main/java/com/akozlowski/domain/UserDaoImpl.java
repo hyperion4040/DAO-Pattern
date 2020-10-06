@@ -10,7 +10,7 @@ import java.util.Optional;
 public class UserDaoImpl implements UserDao {
 
     public static final String INSERT_INTO_USER_NAME_VALUES = "insert into user (name) values (?)";
-    public static final String SELECT_ID_NAME_FROM_MYDB_USER = "select id, name from user";
+    public static final String SELECT_ID_NAME_FROM_USER_ORDER_BY_ID = "select id, name from user order by id";
     public static final String DELETE_FROM_MYDB_USER_WHERE_ID = "delete from user where id=?";
     public static final String SELECT_ID_NAME_FROM_MYDB_USER_WHERE_ID = "select id,name from user where id = (?)";
 
@@ -95,7 +95,7 @@ public class UserDaoImpl implements UserDao {
         try {
             final Statement statement = connection.createStatement();
 
-            ResultSet resultSet = statement.executeQuery(SELECT_ID_NAME_FROM_MYDB_USER);
+            ResultSet resultSet = statement.executeQuery(SELECT_ID_NAME_FROM_USER_ORDER_BY_ID);
 
             while (resultSet.next()) {
                 final int id = resultSet.getInt("id");
